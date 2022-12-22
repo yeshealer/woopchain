@@ -2,8 +2,7 @@
 
 ## How to configue `harhat.config.js`
 
-`
-module.exports = {
+` module.exports = {
   solidity: {
     compilers: [{
       version: "0.8.17",
@@ -34,6 +33,4 @@ module.exports = {
       }
     ]
   }
-};
-
-`
+}; `
