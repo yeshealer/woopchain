@@ -2,7 +2,7 @@
 
 ## How to configue `harhat.config.js`
 
-``
+`
 module.exports = {
   solidity: {
     compilers: [{
@@ -36,4 +36,4 @@ module.exports = {
   }
 };
 
-``
+`
