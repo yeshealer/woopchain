@@ -1,0 +1,39 @@
+------------------------------------------ Mumbai -------------------------------------------
+
+EpochKeyValidityVerifier.sol = 0x6507734f0970400C0D95E6E8E12d85456c925fB3
+StartTransitionVerifier.sol = 0x4e63E53b02Eb3dc503dB6CcF2BCEf7DD2ca50F91
+ProcessAttestationsVerifier.sol = 0x37329BBF649FB690425b647D16517352d33C2067
+UserStateTransitionVerifier.sol = 0x2f0F1b976CE4fD6D58D190090CC6Ccb751bF33d3
+ReputationVerifier.sol = 0x4f5B3158364591856bb051d35ed6027E817858A7
+UserSignUpVerifier.sol = 0x51c1298d7e67FFd239A3b646bAa6bA74e09668dC
+
+UnirepSocial = 0xC63e5A4f3D3bFF40D04F6150A0695988E64a1a72
+WOOPSocial = 0x1179c470757b9b8Caa16f00fD6f0a6D6e1d918a5
+
+
+------------------------------------------- WOOPCHAIN TESTNET -----------------------------------------
+
+EpochKeyValidityVerifier.sol = 0x00780C8645387f271fcE5A06C1E52606410Fc694
+StartTransitionVerifier.sol = 0x845f911bAbC191E666aB762b89EdD6c4F3F06AeF
+ProcessAttestationsVerifier.sol = 0x7845C2945348f224Cf0C7361a5450c56FA2ea248
+UserStateTransitionVerifier.sol = 0x6507734f0970400C0D95E6E8E12d85456c925fB3
+ReputationVerifier.sol = 0x4e63E53b02Eb3dc503dB6CcF2BCEf7DD2ca50F91
+UserSignUpVerifier.sol = 0x37329BBF649FB690425b647D16517352d33C2067
+
+UnirepSocial = 0x2f0F1b976CE4fD6D58D190090CC6Ccb751bF33d3
+WOOPSocial = 0x4f5B3158364591856bb051d35ed6027E817858A7
+Token Contract = 0x51c1298d7e67FFd239A3b646bAa6bA74e09668dC
+
+
+------------------------------------------- WOOPCHAIN MAINNET -----------------------------------------
+
+EpochKeyValidityVerifier.sol = 0x00780C8645387f271fcE5A06C1E52606410Fc694
+StartTransitionVerifier.sol = 0x845f911bAbC191E666aB762b89EdD6c4F3F06AeF
+ProcessAttestationsVerifier.sol = 0x7845C2945348f224Cf0C7361a5450c56FA2ea248
+UserStateTransitionVerifier.sol = 0x6507734f0970400C0D95E6E8E12d85456c925fB3
+ReputationVerifier.sol = 0x4e63E53b02Eb3dc503dB6CcF2BCEf7DD2ca50F91
+UserSignUpVerifier.sol = 0x37329BBF649FB690425b647D16517352d33C2067
+
+Token Contract = 0x2f0F1b976CE4fD6D58D190090CC6Ccb751bF33d3
+UnirepSocial = 0x4f5B3158364591856bb051d35ed6027E817858A7
+WOOPSocial = 0x51c1298d7e67FFd239A3b646bAa6bA74e09668dC
