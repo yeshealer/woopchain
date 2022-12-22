@@ -1,2 +1,2 @@
-# WOOP chain Token Deploy and Verify
+# WOOP Chain Contract Deploy and Verify
 
