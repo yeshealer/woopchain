@@ -36,3 +36,11 @@ module.exports = {
   }
 }; 
 ```
+
+## How to deploy woop token and social contract
+
+### Deploy token contract
+
+```bash
+npx hardhat run scripts/deploy_token.js --network woopchain
+```
