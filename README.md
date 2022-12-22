@@ -15,8 +15,8 @@ module.exports = {
   },
   networks: {
     woopchain: {
-      url: process.env.WOOPCHAIN_RPC,
-      accounts: [process.env.PRIVATE_KEY]
+      url: process.env.WOOPCHAIN_RPC,              // woopchain RPC URL
+      accounts: [process.env.PRIVATE_KEY]          // contract owner wallet private key
     }
   },
   etherscan: {
@@ -43,4 +43,31 @@ module.exports = {
 
 ```bash
 npx hardhat run scripts/deploy_token.js --network woopchain
+```
+
+### Deploy social contract
+Follow it step by step.
+
+```bash
+npx hard run scripts/subContracts/deploy_epochKey.js --network woopchain
+```
+
+```bash
+npx hard run scripts/subContracts/deploy_startTnx.js --network woopchain
+```
+
+```bash
+npx hard run scripts/subContracts/deploy_process.js --network woopchain
+```
+
+```bash
+npx hard run scripts/subContracts/deploy_userstate.js --network woopchain
+```
+
+```bash
+npx hard run scripts/subContracts/deploy_reputation.js --network woopchain
+```
+
+```bash
+npx hard run scripts/subContracts/deploy_userSign.js --network woopchain
 ```
