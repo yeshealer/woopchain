@@ -85,12 +85,12 @@ const contractFactory = await hre.ethers.getContractFactory("UnirepSocial");
 const contract = await contractFactory.deploy(
     [10, 20, 30],
     [40, 50],
-    EpochKeyValidityVerifier,
-    StartTransitionVerifier,
-    ProcessAttestationsVerifier,
-    UserStateTransitionVerifier,
-    ReputationVerifier,
-    UserSignUpVerifier,
+    EpochKeyValidityVerifier,              // replace with deployed EpochKeyValidityVerifier contract address
+    StartTransitionVerifier,               // replace with deployed StartTransitionVerifier contract address
+    ProcessAttestationsVerifier,           // replace with deployed ProcessAttestationsVerifier contract address
+    UserStateTransitionVerifier,           // replace with deployed UserStateTransitionVerifier contract address
+    ReputationVerifier,                    // replace with deployed ReputationVerifier contract address
+    UserSignUpVerifier,                    // replace with deployed UserSignUpVerifier contract address
     60,
     70,
     80,
@@ -111,9 +111,9 @@ Likewise above case you have to update `deploy/deploy_woopSocial.js` as below.
 ```bash
 const contractFactory = await hre.ethers.getContractFactory("WOOPSocial");
 const contract = await contractFactory.deploy(
-    UnirepSocial,
-    ReputationVerifier,
-    EpochKeyValidityVerifier,
+    UnirepSocial,                         // replace with deployed UnirepSocial contract address
+    ReputationVerifier,                   // replace with deployed ReputationVerifier contract address
+    EpochKeyValidityVerifier,             // replace with deployed EpochKeyValidityVerifier contract address
     10,
     20,
     30,
@@ -126,3 +126,44 @@ And then run this command for deploying the woop social contract address.
 ```bash
 npx hardhat run scripts/deploy_woopSocial.js --network woopchain
 ```
+
+### Verify contracts
+
+Update the `verify_token.js`  and `verify_woopSocial.js` and run below commands.
+
+`verify_token.js`
+
+```bash
+await hre.run("verify:verify", {
+    address: Deployed WOOC Token address
+})
+```
+
+
+`verify_woopSocial.js`
+```bash
+await hre.run("verify:verify", {
+    address: Deployed WOOP Social contract address,
+    constructorArguments: [
+        Deployed Unirep Social contract address,
+        Deployed ReputationVerifier Social contract address,
+        Deployed EpochKeyValidityVerifier Social contract address,
+        10,
+        20,
+        30,
+        40
+    ]
+})
+```
+
+The final step is run below commands.
+
+```bash
+npx hardhat run scripts/verify_token.js --network woopchain
+```
+
+```bash
+npx hardhat run scripts/verify_woopSocial.js --network woopchain
+```
+
+Finally, you will get fully verified WOOC token contract and WOOP Social contract addresses.
