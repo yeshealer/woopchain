@@ -78,7 +78,7 @@ npx hard run scripts/subContracts/deploy_userSign.js --network woopchain
 
 And then you need deploy UnirepSocial smart contract.
 
-Before deploy, you have to update `deploy_unirepSocial.js` as you can see below.
+Before deploy, you have to update `deploy/subContracts/deploy_unirepSocial.js` as you can see below.
 
 ```bash
 const contractFactory = await hre.ethers.getContractFactory("UnirepSocial");
@@ -96,4 +96,33 @@ const contract = await contractFactory.deploy(
     80,
     90
 );
+```
+
+And then run this command and save the deployed address.
+
+```bash
+npx hardhat run scripts/subContracts/deploy_unirepSocial.js --network woopchain
+```
+
+The next step is deploying the `woopSocial` contract.
+
+Likewise above case you have to update `deploy/deploy_woopSocial.js` as below.
+
+```bash
+const contractFactory = await hre.ethers.getContractFactory("WOOPSocial");
+const contract = await contractFactory.deploy(
+    UnirepSocial,
+    ReputationVerifier,
+    EpochKeyValidityVerifier,
+    10,
+    20,
+    30,
+    40
+);
+```
+
+And then run this command for deploying the woop social contract address.
+
+```bash
+npx hardhat run scripts/deploy_woopSocial.js --network woopchain
 ```
