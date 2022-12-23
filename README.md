@@ -47,6 +47,8 @@ npx hardhat run scripts/deploy_token.js --network woopchain
 
 ### Deploy social contract
 Follow it step by step.
+Each time you run the command, you will receive the deployed contract address.
+Store those addresses in order.
 
 ```bash
 npx hard run scripts/subContracts/deploy_epochKey.js --network woopchain
