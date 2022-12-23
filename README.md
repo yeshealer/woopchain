@@ -82,18 +82,18 @@ Before deploy, you have to update `deploy_unirepSocial.js` as you can see below.
 
 ```bash
 const contractFactory = await hre.ethers.getContractFactory("UnirepSocial");
-    const contract = await contractFactory.deploy(
-        [10, 20, 30],
-        [40, 50],
-        EpochKeyValidityVerifier,
-        StartTransitionVerifier,
-        ProcessAttestationsVerifier,
-        UserStateTransitionVerifier,
-        ReputationVerifier,
-        UserSignUpVerifier,
-        60,
-        70,
-        80,
-        90
-    );
+const contract = await contractFactory.deploy(
+    [10, 20, 30],
+    [40, 50],
+    EpochKeyValidityVerifier,
+    StartTransitionVerifier,
+    ProcessAttestationsVerifier,
+    UserStateTransitionVerifier,
+    ReputationVerifier,
+    UserSignUpVerifier,
+    60,
+    70,
+    80,
+    90
+);
 ```
