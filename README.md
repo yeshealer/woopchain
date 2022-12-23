@@ -47,7 +47,9 @@ npx hardhat run scripts/deploy_token.js --network woopchain
 
 ### Deploy social contract
 Follow it step by step.
+
 Each time you run the command, you will receive the deployed contract address.
+
 Store those addresses in order.
 
 ```bash
@@ -72,4 +74,26 @@ npx hard run scripts/subContracts/deploy_reputation.js --network woopchain
 
 ```bash
 npx hard run scripts/subContracts/deploy_userSign.js --network woopchain
+```
+
+And then you need deploy UnirepSocial smart contract.
+
+Before deploy, you have to update `deploy_unirepSocial.js` as you can see below.
+
+```bash
+const contractFactory = await hre.ethers.getContractFactory("UnirepSocial");
+    const contract = await contractFactory.deploy(
+        [10, 20, 30],
+        [40, 50],
+        EpochKeyValidityVerifier,
+        StartTransitionVerifier,
+        ProcessAttestationsVerifier,
+        UserStateTransitionVerifier,
+        ReputationVerifier,
+        UserSignUpVerifier,
+        60,
+        70,
+        80,
+        90
+    );
 ```
